@@ -8,9 +8,13 @@ export const FETCH_SMURFS_FAIL = "FETCH_SMURFS_FAIL";
 //exporting post
 export const POST_SMURF_SUCCESS = "POST_SMURF_SUCCESS";
 export const POST_SMURF_FAIL = "POST_SMURF_FAIL";
+export const POST_SMURFS_START = "POST_SMURFS_START";
+
 
 
 // building out actions
+
+
 
 export const  getSmurfs = () => dispatch => {
     dispatch({ type: FETCH_SMURFS_START });
@@ -26,6 +30,7 @@ export const  getSmurfs = () => dispatch => {
 }
 
 export const postSmurf = newSmurf => dispatch => {
+    // dispatch({ type: POST_SMURFS_START });
     axios
         .post ("http://localhost:3333/smurfs", newSmurf)
         .then(res => {

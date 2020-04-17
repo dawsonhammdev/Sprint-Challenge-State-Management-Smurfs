@@ -43,7 +43,7 @@ const reducer = (state = initialState, action) => {
                 age: "",
                 height: "" 
             };
-            return { ...state, smurfs: [...state.smurfs, newSmurf] };
+            return { ...state, smurfs: [{...state.smurfs, newSmurf }] };
         case POST_SMURF_FAIL:
             return {
                 ...state,
