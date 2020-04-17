@@ -9,6 +9,7 @@ const SmurfList = props => {
     )
 }
 
+// connecting SmurfList
 export default connect()(SmurfList)
 
 
